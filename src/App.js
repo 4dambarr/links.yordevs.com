@@ -1,5 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
+import Background from './Background';
+import Link from './Link';
+
+const Card = styled.div`
+  max-width: 300px;
+  background-color: rgba(200,200,200,0.9);
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+`
 
 const PageHolder = styled.div`
   display: flex;
@@ -8,11 +22,6 @@ const PageHolder = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-`;
-
-const Link = styled.a`
- text-decoration: none;
- font-size: x-large;
 `;
 
 const sourceMessage = {
@@ -38,14 +47,18 @@ function App() {
 
   return (
     <PageHolder>
-      <h1>{"<Yordevs />"}</h1>
-      <p>{sourceMessage[source] ? sourceMessage[source] : ""}</p>
-      <Link href="https://yordevs.com">Website</Link>
-      <Link href="https://discord.gg/ywfNpWFQk3">Discord</Link>
-      <Link href="mailto:yordevs@yusu.org">Email</Link>
-      <Link href="https://facebook.com/yordevs">Facebook</Link>
-      <Link href="https://twitter.com/yordevs">Twitter</Link>
-      <Link href="https://instagram.com/yordevs">Instagram</Link>
+      <Background />
+      <Card>
+        <h1>{"<Yordevs />"}</h1>
+        <p>{sourceMessage[source] ? sourceMessage[source] : ""}</p>
+        <Link href="https://yordevs.com">Website</Link>
+        <Link href="https://discord.gg/ywfNpWFQk3">Discord</Link>
+        <Link href="mailto:yordevs@yusu.org">Email</Link>
+        <Link href="https://facebook.com/yordevs">Facebook</Link>
+        <Link href="https://twitter.com/yordevs">Twitter</Link>
+        <Link href="https://instagram.com/yordevs">Instagram</Link>
+      </Card>
+
     </PageHolder>
   );
 }
