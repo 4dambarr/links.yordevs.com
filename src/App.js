@@ -57,6 +57,7 @@ function App() {
         <Link href="https://facebook.com/yordevs">Facebook</Link>
         <Link href="https://twitter.com/yordevs">Twitter</Link>
         <Link href="https://instagram.com/yordevs">Instagram</Link>
+        <Link href="https://yordle.co.uk">Yordle</Link>
       </Card>
 
     </PageHolder>
